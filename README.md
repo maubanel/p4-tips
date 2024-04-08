@@ -29,6 +29,16 @@ P4USER=unrealserver_background (enviro)
 ```
 output
 ```
+
+
+## Hostnames on Mac OSX
+* Mac's will change hostnames when it is on networks like LSU's with dynamic IP's (and maybe some folks home syste).
+* * In **Terminal** type `hostname`.  If you see a value like `60-3e-5f-59-bf-f5.wlan.lsu.edu` then LSU is changing the hostname of your computer.  The hostname should in both Perforce and your computer should be fixed and based on your network name.
+* Open **System Preference**s, click **General | Sharing** and take note of of the value in the **Local hostname** field (typically as a .local) at the end.
+* Click **Edit** and make sure the "Use dynamic global hostname" checkbox is **unchecked**.
+* Open up **Terminal** and check the name before the cursor and see if it i the same at the hostname above?
+* If not then enter `sudo scutil --set HostName new_hostname`.  So in my case it was `sudo scutil --set HostName MarcA.local`.
+* Type `hostname` in **Terminal** again and confirm that you see the correct Hostname.
 <details>
   <summary>Dev Tips &raquo;</summary>
 
