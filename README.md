@@ -8,11 +8,15 @@
 * Each workspace needs a unique `.p4config` file. A [batch](./files/setconfig.bat) file is available for you to use for Windows to make this easier.
 * More information about the [.p4config is found here](./P4CONFIG.md).
 
+## Recommended Workflow
+* Every session run **P4V** and switch the desired **Workspace** and press **Get Latest**.  This means you are up to date with the head of the server.
+
+
 ## Commands you Need to Know
 * `p4 set` (should show the content of P4Config)
 * `p4 info` (shows extended info about the perforce server)
 * The above two commands should show 
-* Bad p4 set output:
+* Bad p4 set output. This means that I have not set up my `.p4config` properly as the **P4HOST**, **P4PORT** and **P4USER** are wrong.:
 ```
 P4HOST=Marcs-MacBook-Pro-2.local (enviro)
 P4IGNORE=.p4ignore (enviro)
@@ -20,8 +24,11 @@ P4PORT=ssl:perforce.ncam-dt.com:16666 (enviro)
 P4USER=unrealserver_background (enviro)
 
 ```
-* This means that I have not set up my `.p4config` properly as the **P4HOST**, **P4PORT** and **P4USER** are wrong.
-
+* 
+* Good `p4set` output:
+```
+output
+```
 <details>
   <summary>Dev Tips &raquo;</summary>
 
