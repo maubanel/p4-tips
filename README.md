@@ -9,7 +9,13 @@
 * More information about the [.p4config is found here](./P4CONFIG.md).
 
 ## Recommended Workflow
-* Every session run **P4V** and switch the desired **Workspace** and press **Get Latest**.  This means you are up to date with the head of the server.
+* Every session run **P4V** and switch the desired **Workspace** and press **Get Latest**.  This means you are up to date with the head of the server. I recommend doing this in the editor and not in the game engine.
+* If you are working in a game engine, before editing a level or an item save it (even if there is nothing new).  This will force the engine to check out the file.  If it saves and you don't submit it that means you can check it out and work on it.  I have too many times worked for 2 hours of a level, went to save it only to be told that it is checked out by someone else.  At that point I either have to lose all my work or have the other person lose all the their work.  The above quick save just stops that from happeing.
+* Make any changes you need
+* Submit either through the Game Engine or throug P4V
+* When working on a game engine it is a good idea to select **Actions | Clean** in perforce before quitting your session.  This makes sure that all the files in your workspace (except for the ones being ignored) are the same version as in the depot.  If you find that your project is not identical to your teammates, you probably have filesd that are not added to the Depot.
+* Double check that your Pending list is empty (all black and blue, no red folders).  Press the **Refresh** button to be sure!
+* You are done with your work session.
 
 
 ## Commands you Need to Know
